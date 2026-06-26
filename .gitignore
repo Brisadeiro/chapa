@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vetor Dinâmico no JS.do</title>
+</head>
+<body>
+
+<script>
+    let vetor = [];
+    let continuar = true;
+    while (continuar) {
+        let entrada = prompt("Digite um número (ou clique em Cancelar / digite 'fim' para encerrar):");
+        if (entrada === null || entrada.toLowerCase() === 'fim' || entrada.trim() === '') {
+            continuar = false;
+        } else {
+            let numero = Number(entrada);
+            if (!isNaN(numero)) {
+                vetor.push(numero); 
+            } else {
+                alert("Por favor, digite apenas números válidos.");
+            }
+        }
+    }
+    if (vetor.length > 0) {
+        document.write("<h3>Vetor Digitado (Original):</h3>");
+        document.write("[" + vetor.join(", ") + "]");
+        document.write("<p>Você digitou um total de: <strong>" + vetor.length + "</strong> números.</p>");
+        vetor.sort((a, b) => a - b);
+
+        document.write("<h3>Vetor Ordenado (Crescente):</h3>");
+        document.write("[" + vetor.join(", ") + "]");
+    } else {
+        document.write("<h3>Nenhum número foi digitado.</h3>");
+    }
+</script>
+
+</body>
+</html>
