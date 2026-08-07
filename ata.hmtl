@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <script>
+        function calcular() {
+            let n1 = Number(document.getElementById('n1').value);
+            let n2 = Number(document.getElementById('n2').value);
+            let op = document.getElementById('op').value;
+            let res = 0;
+
+            if (op === '+') res = n1 + n2;
+            else if (op === '-') res = n1 - n2;
+            else if (op === '*') res = n1 * n2;
+            else if (op === '/') res = n2 !== 0 ? n1 / n2 : 'Erro';
+
+            document.getElementById('res').innerText = 'Resultado: ' + res;
+        }
+    </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+
+    <h2>Calculadora Simples</h2>
+    
+    <input type="number" id="n1" placeholder="Número 1">
+    
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="number" id="n2" placeholder="Número 2">
+    
+    <button onclick="calcular()">=</button>
+
+    <h3 id="res">Resultado: </h3>
+
+</body>
+</html>
