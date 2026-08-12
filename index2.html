@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="btn-geral">Esconder Todos</button>
+
+  <div>
+    <div class="item-titulo">Matemática</div>
+    <div class="lista-conteudo">
+      <div>Álgebra</div>
+      <div>Geometria</div>
+      <div>Trigonometria</div>
+    </div>
+
+    <div class="item-titulo">Português</div>
+    <div class="lista-conteudo">
+      <div>Gramática</div>
+      <div>Literatura</div>
+      <div>Redação</div>
+    </div>
+  </div>
+
+  <script>
+    const btnGeral = document.getElementById('btn-geral');
+    const titulos = document.querySelectorAll('.item-titulo');
+    const listas = document.querySelectorAll('.lista-conteudo');
+
+    let estadoGeral = 0;
+
+    titulos.forEach((titulo, indice) => {
+      titulo.addEventListener('click', () => {
+        if (listas[indice].hidden === 1) {
+          listas[indice].hidden = 0;
+        } else {
+          listas[indice].hidden = 1;
+        }
+      });
+    });
+
+    btnGeral.addEventListener('click', () => {
+      if (estadoGeral === 0) {
+        listas.forEach(lista => lista.hidden = 1);
+        btnGeral.innerText = 'Mostrar Todos';
+        estadoGeral = 1;
+      } else {
+        listas.forEach(lista => lista.hidden = 0);
+        btnGeral.innerText = 'Esconder Todos';
+        estadoGeral = 0;
+      }
+    });
+  </script>
+
+</body>
+</html>
