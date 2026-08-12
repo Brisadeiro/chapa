@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora DOM Simples</title>
+</head>
+<body>
+
+  <h1 id="visor">0</h1>
+
+  <div>
+    <button id="btn-limpar">C</button>
+    <button class="btn-op">÷</button>
+    <button class="btn-op">×</button>
+    <button class="btn-op">-</button>
+  </div>
+  <div>
+    <button class="btn-num">7</button>
+    <button class="btn-num">8</button>
+    <button class="btn-num">9</button>
+    <button class="btn-op">+</button>
+  </div>
+  <div>
+    <button class="btn-num">4</button>
+    <button class="btn-num">5</button>
+    <button class="btn-num">6</button>
+    <button id="btn-igual">=</button>
+  </div>
+  <div>
+    <button class="btn-num">1</button>
+    <button class="btn-num">2</button>
+    <button class="btn-num">3</button>
+    <button class="btn-num">0</button>
+  </div>
+
+  <script>
+    const visor = document.getElementById('visor');
+    const botoesNumeros = document.querySelectorAll('.btn-num');
+    const botoesOperadores = document.querySelectorAll('.btn-op');
+    const btnIgual = document.getElementById('btn-igual');
+    const btnLimpar = document.getElementById('btn-limpar');
+
+    let valorAnterior = 0;
+    let operacao = '';
+    let limpaVisor = 0;
+
+    botoesNumeros.forEach(botao => {
+      botao.addEventListener('click', () => {
+        if (visor.innerText === '0' || limpaVisor === 1) {
+          visor.innerText = botao.innerText;
+          limpaVisor = 0;
+        } else {
+          visor.innerText += botao.innerText;
+        }
+      });
+    });
+
+    botoesOperadores.forEach(botao => {
+      botao.addEventListener('click', () => {
+        valorAnterior = Number(visor.innerText);
+        operacao = botao.innerText;
+        limpaVisor = 1;
+      });
+    });
+
+    btnIgual.addEventListener('click', () => {
+      const valorAtual = Number(visor.innerText);
+      let resultado = 0;
+
+      if (operacao === '+') resultado = valorAnterior + valorAtual;
+      if (operacao === '-') resultado = valorAnterior - valorAtual;
+      if (operacao === '×') resultado = valorAnterior * valorAtual;
+      if (operacao === '÷') resultado = valorAnterior / valorAtual;
+
+      visor.innerText = resultado;
+      valorAnterior = resultado;
+      operacao = '';
+      limpaVisor = 1;
+    });
+
+    btnLimpar.addEventListener('click', () => {
+      visor.innerText = '0';
+      valorAnterior = 0;
+      operacao = '';
+      limpaVisor = 0;
+    });
+  </script>
+
+</body>
+</html>
