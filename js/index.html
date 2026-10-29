@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"><meta name="author" content="Lucas Leoterio e Gabriel Magaldi Laureano">
+    <title>Trabalho de Web - Cultura Alemã</title>
+    <style>
+        img {
+    object-fit: cover;
+}
+        body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; color: #333; }
+        header, footer { background: #222; color: #fff; padding: 15px; }
+        header { border-bottom: 4px solid #cc0000; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; }
+        .dupla { color: #ffcc00; font-size: 14px; }
+        nav ul { display: flex; list-style: none; padding: 0; margin-top: 10px; }
+        nav li { margin-right: 15px; }
+        nav a { color: #fff; text-decoration: none; padding: 5px 10px; border-radius: 3px; background: #444; }
+        nav a:hover { background: #cc0000; }
+        main { padding: 20px; }
+        section { background: #fff; padding: 20px; margin-bottom: 25px; border-radius: 8px; border: 1px solid #ccc; }
+        h2 { color: #cc0000; border-bottom: 2px solid #222; padding-bottom: 5px; }
+        .linha-home { display: flex; align-items: center; margin-bottom: 20px; padding: 10px; border: 1px solid #eee; }
+        .linha-home img { width: 300px; height: 200px; border-radius: 5px; }
+        .texto-home { padding: 15px; }
+        .container-70 { width: 70%; margin: 0 auto; }
+        .cards-comida { display: flex; flex-wrap: wrap; gap: 15px; }
+        .card-item { flex: 1 1 20%; background: #fafafa; border: 1px solid #ddd; border-radius: 5px; padding: 10px; text-align: center; }
+        .card-item img { width: 100%; height: 120px; border-radius: 4px; }
+        .container-50 { width: 50%; margin: 0 auto; }
+        .cards-tradicao { display: flex; flex-wrap: wrap; gap: 15px; }
+        .box-tradicao { flex: 1 1 40%; background: #fff9e6; border: 1px solid #ffcc00; border-radius: 5px; padding: 15px; }
+        .galeria-flex { display: flex; gap: 15px; justify-content: center; }
+        .coluna-dupla, .coluna-unica { width: 50%; }
+        .coluna-dupla { display: flex; flex-direction: column; gap: 15px; }
+        .coluna-dupla img { width: 100%; height: 180px; border: 2px solid #222; border-radius: 5px; }
+        .coluna-unica img { width: 100%; height: 375px; border: 2px solid #222; border-radius: 5px; }
+        footer { text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top"><h1>Cultura Alemã</h1><p class="dupla">Alunos: Lucas Leoterio e Gabriel Magaldi Laureano</p></div>
+        <nav><ul><li><a href="#home">Home</a></li><li><a href="#gastronomia">Gastronomia</a></li><li><a href="#tradicoes">Tradições</a></li><li><a href="#galeria">Galeria</a></li></ul></nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Página Inicial - Sobre a Alemanha</h2>
+            <div class="linha-home"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Schloss_Neuschwanstein_2013.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Castelo Neuschwanstein"><div class="texto-home"><h3>Arquitetura e História</h3><p>A Alemanha é famosa por seus castelos antigos e cidades históricas, misturando a época medieval com prédios modernos.</p></div></div>
+            <div class="linha-home"><div class="texto-home"><h3>Natureza e Florestas</h3><p>O país tem paisagens naturais incríveis, como a famosa Floresta Negra e os Alpes Bávaros.</p></div><img src="https://www.vounajanela.com/wp-content/uploads/2016/03/capa17.jpg" alt="Floresta Negra"></div>
+        </section>
+        <section id="gastronomia">
+            <h2>Pratos Típicos (Gastronomia)</h2>
+            <div class="container-70"><div class="cards-comida">
+                <div class="card-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3BhqPtxlda8x90yuoncd0gLU7uUoXoUcWXznBaWLKCQ&s=10" alt="Salsicha Bratwurst"><h4>Bratwurst</h4><p>Salsicha alemã grelhada.</p></div>
+                <div class="card-item"><img src="https://www.allrecipes.com/thmb/jQRslNjmkoqg5yUuNfzrHJcoJ-M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ranch-pretzels-recipe-8418575lutzflcat4x3-46a11f74c1f34a358578988f5faaacb9.jpg" alt="Pretzel"><h4>Pretzel</h4><p>Pão tradicional salgado.</p></div>
+                <div class="card-item"><img src="https://tastythriftytimely.com/wp-content/uploads/2025/02/Homemade-Sauerkraut-Recipe-5-7-Day-Ferment-FEATURED.jpg" alt="Chucrute"><h4>Sauerkraut</h4><p>O famoso chucrute.</p></div>
+                <div class="card-item"><img src="https://www.recipetineats.com/tachyon/2026/03/French-pork-schnitzel-1.jpg" alt="Schnitzel"><h4>Schnitzel</h4><p>Bife empanado e frito.</p></div>
+            </div></div>
+        </section>
+        <section id="tradicoes">
+            <h2>Festas e Tradições</h2>
+            <div class="container-50"><div class="cards-tradicao">
+                <div class="box-tradicao"><h3>Oktoberfest</h3><p>A festa mais famosa. Atrações:</p><ol><li>Músicas típicas</li><li>Roupas tradicionais</li><li>Comidas regionais</li></ol></div>
+                <div class="box-tradicao"><h3>Mercados de Natal</h3><p>Nas praças no fim do ano:</p><ul><li>Biscoitos decorados</li><li>Doces de gengibre</li><li>Enfeites artesanais</li></ul></div>
+            </div></div>
+        </section>
+        <section id="galeria">
+            <h2>Galeria de Fotos</h2>
+            <div class="galeria-flex">
+                <div class="coluna-dupla"><img src="https://media.istockphoto.com/id/2178491819/pt/foto/beautiful-summer-sunrise-view-of-the-marienplatz-square-in-munich.jpg?s=612x612&w=0&k=20&c=Vwwws7rQ5frzkWLjk0PH1OqxC7vXcwUnyw5c3Xa_S3A=" alt="Munique Marienplatz"><img src="https://media.istockphoto.com/id/508317366/pt/foto/port%C3%A3o-de-brandemburgo-em-berlim-em-crep%C3%BAsculo-alemanha.jpg?s=612x612&w=0&k=20&c=wFe5mHG2RUDZvtifc_dmU-UJBCMdbTCkM1881kTHnJY=" alt="Portão de Brandemburgo"></div>
+                <div class="coluna-unica"><img src="https://media.istockphoto.com/id/2171370035/pt/foto/kings-lake-koenigssee-watzmann-eastern-wall-berchtesgadener-land-bavaria-germany-europe.jpg?s=612x612&w=0&k=20&c=6GDJZ0uKZS9B0nFGHNLbJvgJAvbCIp7m3t81NHPE_qY=" alt="Alpes da Alemanha"></div>
+            </div>
+        </section>
+    </main>
+    <footer><p>Atividade de Programação Web - Módulo CSS | Alunos: Lucas & Gabriel</p></footer>
+</body>
+</html>
